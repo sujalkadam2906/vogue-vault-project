@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Credits: VOGUE VAULT</title>
+  <meta name="description" content="Attributions and commercial licensing sources for product photography used on VOGUE VAULT." />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3B2A20" />
+  <link rel="canonical" href="https://YOURDOMAIN.com/credits.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Image Credits: VOGUE VAULT" />
+  <meta property="og:description" content="Attributions and commercial licensing sources for product photography used on VOGUE VAULT." />
+  <meta property="og:url" content="https://YOURDOMAIN.com/credits.html" />
+  <meta property="og:site_name" content="VOGUE VAULT" />
+</head>
+<body>
+  <div id="header"></div>
+  <main class="page-container">
+    <div class="legal-container">
+      <header class="legal-header">
+        <h1>Image Credits and Attributions</h1>
+        <p class="legal-meta">All imagery used on VOGUE VAULT is sourced under free commercial licenses or public domain</p>
+      </header>
+
+      <div class="todo-callout" role="note">
+        <h3>Launch Readiness Checklist</h3>
+        <p>Ensure every asset file matches the corresponding photographer credit and license record in assets/images/CREDITS.md before final deployment.</p>
+      </div>
+
+      <article class="legal-section">
+        <h2>Licensing Standards</h2>
+        <p>In accordance with our strict design rules, VOGUE VAULT utilizes exclusively authentic, real-world human photography. No synthetic or generated depictions are permitted anywhere in this application.</p>
+        <p>All photos are sourced under either the <strong>Unsplash License</strong> or the <strong>Pexels License</strong>, granting free commercial use without required royalty fees.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>Catalogue Image Register</h2>
+        <p>The detailed attribution table containing individual photographers, original source links, and asset filenames is maintained in our repository at <a href="#credits-list">assets/images/CREDITS.md</a>. Summary of contributors:</p>
+        <div id="credits-list">
+          <ul>
+            <li><strong>Classic Cotton T-Shirt (P001):</strong> Photo by Ryan Hoffman on Unsplash (Free commercial use).</li>
+            <li><strong>Midnight Silk Dress (P002):</strong> Photo by Tamara Bellis on Unsplash (Free commercial use).</li>
+            <li><strong>Relaxed Fit Denim (P003):</strong> Photo by Waldemar Brandt on Unsplash (Free commercial use).</li>
+            <li><strong>Urban Runner Sneakers (P004):</strong> Photo by Paul Volkmer on Unsplash (Free commercial use).</li>
+            <li><strong>Faux Leather Biker Jacket (P005):</strong> Photo by Alex Shaw on Unsplash (Free commercial use).</li>
+            <li><strong>Floral Maxi Dress (P006):</strong> Photo by Valerie Elash on Unsplash (Free commercial use).</li>
+            <li><strong>Slim Fit Chinos (P007):</strong> Photo by NordWood Themes on Unsplash (Free commercial use).</li>
+            <li><strong>Oversized Knit Sweater (P008):</strong> Photo by Kelly Sikkema on Unsplash (Free commercial use).</li>
+            <li><strong>Classic Oxford Shirt (P009):</strong> Photo by Nimble Made on Unsplash (Free commercial use).</li>
+            <li><strong>High-Waist Wide Leg Trousers (P010):</strong> Photo by Priscilla Du Preez on Unsplash (Free commercial use).</li>
+            <li><strong>Minimalist Leather Watch (P011):</strong> Photo by Campbell on Unsplash (Free commercial use).</li>
+            <li><strong>Canvas Tote Bag (P012):</strong> Photo by Mediamodifier on Unsplash (Free commercial use).</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="legal-section">
+        <h2>Report an Image Attribution Issue</h2>
+        <p>If you represent a rights-holder and believe any photo has been improperly attributed or used outside license scope, please contact us at [CONTACT EMAIL] for immediate resolution or replacement.</p>
+      </article>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <div class="toast-container"></div>
+  <script type="module">
+    import { renderHeader } from './src/components/header.js';
+    import { renderFooter } from './src/components/footer.js';
+    import { getCartItemCount } from './src/services/cart-service.js';
+    document.getElementById('header').innerHTML = renderHeader(getCartItemCount());
+    document.getElementById('footer').innerHTML = renderFooter();
+  </script>
+</body>
+</html>

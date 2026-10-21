@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy: VOGUE VAULT</title>
+  <meta name="description" content="Privacy Policy for VOGUE VAULT. Explains browser local storage data, cookies, third-party assets, and user rights." />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3B2A20" />
+  <link rel="canonical" href="https://YOURDOMAIN.com/privacy.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Policy: VOGUE VAULT" />
+  <meta property="og:description" content="Privacy Policy for VOGUE VAULT. Explains browser local storage data, cookies, third-party assets, and user rights." />
+  <meta property="og:url" content="https://YOURDOMAIN.com/privacy.html" />
+  <meta property="og:site_name" content="VOGUE VAULT" />
+</head>
+<body>
+  <div id="header"></div>
+  <main class="page-container">
+    <div class="legal-container">
+      <header class="legal-header">
+        <h1>Privacy Policy</h1>
+        <p class="legal-meta">Effective Date: October 2026. Last Updated: October 2026</p>
+      </header>
+
+      <div class="todo-callout" role="note">
+        <h3>Launch Readiness Checklist</h3>
+        <p>Before launching this website commercially, replace all bracketed placeholders with verified legal details and have this policy reviewed by qualified legal counsel:</p>
+        <ul>
+          <li>Replace [BUSINESS LEGAL NAME] with registered business or company name.</li>
+          <li>Replace [CONTACT EMAIL] with dedicated data privacy or customer care email.</li>
+          <li>Replace [REGISTERED ADDRESS] with official legal address.</li>
+        </ul>
+      </div>
+
+      <article class="legal-section">
+        <h2>1. Overview and Demonstration Status</h2>
+        <p>This website (VOGUE VAULT) operates as a client-side frontend e-commerce demonstration. We respect your privacy and provide this disclosure to explain how information is handled when you browse and interact with our web storefront.</p>
+        <p>Unless expressly modified by a backend server integration, this application does not operate a database backend, does not transmit personal profile data across the network to proprietary servers, and does not sell or distribute personal data to advertising brokers.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>2. Data Stored in Local Storage</h2>
+        <p>To provide a continuous shopping experience across browser sessions, this application stores user selections directly within your browser's local storage (window.localStorage). This data remains exclusively on your device:</p>
+        <ul>
+          <li><strong>Shopping Bag:</strong> Stores selected item identifiers, sizes, and quantities under the key fashion_clone_cart.</li>
+          <li><strong>Wishlist:</strong> Stores saved product identifiers and bookmark timestamps under the key fashion_clone_wishlist.</li>
+          <li><strong>Simulated Orders:</strong> Stores mock checkout records, recipient names, addresses, and PIN codes entered during demo checkout under the key fashion_clone_orders.</li>
+          <li><strong>Recent Searches:</strong> Stores search keywords entered in the catalogue search bar to assist navigation.</li>
+        </ul>
+        <p>You may completely delete all stored records at any time by clearing your browser cache and local storage data, or by clearing specific items directly within the interface.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>3. Third-Party Services and External Assets</h2>
+        <p>To render typography and product photography, this application communicates with the following external content networks:</p>
+        <ul>
+          <li><strong>Google Fonts:</strong> Typography files (Inter and Cormorant Garamond) are retrieved from fonts.googleapis.com and fonts.gstatic.com to render headings and body text.</li>
+          <li><strong>Image Repositories:</strong> Curated product photographs may be loaded from licensed commercial repositories (Unsplash and Pexels CDN). These servers may log standard HTTP request metadata such as your IP address and user-agent string.</li>
+        </ul>
+      </article>
+
+      <article class="legal-section">
+        <h2>4. User Rights and Data Control</h2>
+        <p>Under applicable data privacy regulations, including the Indian Digital Personal Data Protection Act (DPDP), users possess the right to understand what information is retained and to request erasure. Because all state is stored locally within your browser client, you retain direct, immediate control to purge or inspect all stored data via your browser developer tools or settings.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>5. Contact Information</h2>
+        <p>For questions regarding this privacy policy or technical data practices, please contact:</p>
+        <p><strong>Entity:</strong> [BUSINESS LEGAL NAME]</p>
+        <p><strong>Email:</strong> [CONTACT EMAIL]</p>
+        <p><strong>Address:</strong> [REGISTERED ADDRESS]</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>6. Legal Template Advisory</h2>
+        <p><em>Notice: This document serves as an informational template. It must be adapted to your specific business registrations, technical architecture, and governing jurisdiction by a qualified legal professional before commercial deployment.</em></p>
+      </article>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <div class="toast-container"></div>
+  <script type="module">
+    import { renderHeader } from './src/components/header.js';
+    import { renderFooter } from './src/components/footer.js';
+    import { getCartItemCount } from './src/services/cart-service.js';
+    document.getElementById('header').innerHTML = renderHeader(getCartItemCount());
+    document.getElementById('footer').innerHTML = renderFooter();
+  </script>
+</body>
+</html>

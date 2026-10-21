@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOGUE VAULT: Modern Wardrobe Essentials</title>
+  <meta name="description" content="Curated apparel and footwear for men and women. Built with durable fabrics and timeless cuts." />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3B2A20" />
+  <link rel="canonical" href="https://YOURDOMAIN.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VOGUE VAULT: Modern Wardrobe Essentials" />
+  <meta property="og:description" content="Curated apparel and footwear for men and women. Built with durable fabrics and timeless cuts." />
+  <meta property="og:url" content="https://YOURDOMAIN.com/" />
+  <meta property="og:site_name" content="VOGUE VAULT" />
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="hero">
+      <div class="page-container hero-inner">
+        <div class="hero-copy">
+          <span class="hero-eyebrow">Curated Apparel</span>
+          <h1 class="hero-title">VOGUE VAULT</h1>
+          <p class="hero-desc">Everyday essentials and tailored pieces for men and women.</p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn-primary">Shop Collection</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/images/products/P002-1.jpg" alt="VOGUE VAULT clothing collection" width="480" height="600" onerror="this.onerror=null;this.src='assets/images/placeholders/product-placeholder.svg';" />
+        </div>
+      </div>
+    </section>
+    <section class="page-container section-spacer">
+      <h2 class="section-title">New Arrivals</h2>
+      <div id="trending-grid"></div>
+    </section>
+    <section class="page-container section-spacer">
+      <h2 class="section-title">Featured Pieces</h2>
+      <div id="featured-grid"></div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <div class="toast-container"></div>
+  <script type="module" src="src/pages/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipping and Returns: VOGUE VAULT</title>
+  <meta name="description" content="Shipping timelines, delivery coverage, and 15-day return policy for VOGUE VAULT." />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3B2A20" />
+  <link rel="canonical" href="https://YOURDOMAIN.com/shipping.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shipping and Returns: VOGUE VAULT" />
+  <meta property="og:description" content="Shipping timelines, delivery coverage, and 15-day return policy for VOGUE VAULT." />
+  <meta property="og:url" content="https://YOURDOMAIN.com/shipping.html" />
+  <meta property="og:site_name" content="VOGUE VAULT" />
+</head>
+<body>
+  <div id="header"></div>
+  <main class="page-container">
+    <div class="legal-container">
+      <header class="legal-header">
+        <h1>Shipping and Returns Policy</h1>
+        <p class="legal-meta">Effective Date: October 2026. Standard policies for VOGUE VAULT orders</p>
+      </header>
+
+      <div class="todo-callout">
+        <h3>Launch Readiness Checklist</h3>
+        <ul>
+          <li>Replace [CONTACT EMAIL] with actual business returns address.</li>
+          <li>Confirm domestic courier SLAs and shipping rates before production launch.</li>
+        </ul>
+      </div>
+
+      <article class="legal-section">
+        <h2>1. Shipping and Delivery</h2>
+        <p>We provide standard domestic delivery across India. All orders are packed and dispatched from our fulfillment center within 24 to 48 hours of order confirmation.</p>
+        <ul>
+          <li><strong>Metro Areas:</strong> 2 to 4 business days.</li>
+          <li><strong>Non-Metro Areas:</strong> 4 to 7 business days.</li>
+          <li><strong>Standard Shipping Fee:</strong> Complimentary on all orders during this release.</li>
+        </ul>
+        <p>Once dispatched, tracking links are simulated within your customer session.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>2. 15-Day Return Window</h2>
+        <p>We accept returns of unwashed, unworn garments with all tags intact within 15 days of delivery. For hygiene reasons, innerwear and socks are final sale unless damaged upon arrival.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>3. How to Initiate a Return</h2>
+        <p>To request a return or size exchange, email customer support at [CONTACT EMAIL] with your order reference number and the reason for exchange. A courier pick-up will be scheduled within 2 business days.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>4. Refunds</h2>
+        <p>Following item inspection at our warehouse, approved refunds are initiated to the original payment source within 5 to 7 business days. Since this site is currently a demonstration store, mock transactions will not charge your bank account or card.</p>
+      </article>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <div class="toast-container"></div>
+  <script type="module">
+    import { renderHeader } from './src/components/header.js';
+    import { renderFooter } from './src/components/footer.js';
+    import { getCartItemCount } from './src/services/cart-service.js';
+    document.getElementById('header').innerHTML = renderHeader(getCartItemCount());
+    document.getElementById('footer').innerHTML = renderFooter();
+  </script>
+</body>
+</html>

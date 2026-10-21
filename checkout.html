@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout: VOGUE VAULT</title>
+  <meta name="description" content="Complete your order details with simulated shipping and payment processing." />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3B2A20" />
+  <link rel="canonical" href="https://YOURDOMAIN.com/checkout.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Checkout: VOGUE VAULT" />
+  <meta property="og:description" content="Complete your order details with simulated shipping and payment processing." />
+  <meta property="og:url" content="https://YOURDOMAIN.com/checkout.html" />
+  <meta property="og:site_name" content="VOGUE VAULT" />
+</head>
+<body>
+  <div id="header"></div>
+  <main class="page-container">
+    <header class="page-header">
+      <h1>Checkout</h1>
+    </header>
+
+    <div class="checkout-notice">
+      Demonstration Mode: Orders placed here store cart records in local storage. No payment or real fulfillment is executed.
+    </div>
+
+    <div class="checkout-layout">
+      <div>
+        <form id="checkout-form" novalidate>
+          <div class="form-group">
+            <label for="checkout-name" class="form-label">Full Name</label>
+            <input type="text" id="checkout-name" name="name" class="input-control" required autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="checkout-address" class="form-label">Delivery Address</label>
+            <textarea id="checkout-address" name="address" class="input-control" required autocomplete="street-address"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="checkout-pin" class="form-label">Postal PIN Code</label>
+            <input type="text" id="checkout-pin" name="pin" class="input-control" required pattern="^[0-9]{6}$" maxlength="6" inputmode="numeric" />
+          </div>
+
+          <div class="form-group">
+            <label for="checkout-payment" class="form-label">Payment Method (Simulation)</label>
+            <select id="checkout-payment" name="payment" class="select-control" required>
+              <option value="UPI">Simulated UPI Transfer</option>
+              <option value="Card">Simulated Credit/Debit Card</option>
+              <option value="NetBanking">Simulated Net Banking</option>
+            </select>
+          </div>
+
+          <label class="checkbox-label" for="agree-terms">
+            <input type="checkbox" id="agree-terms" name="agree" required />
+            <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms and Conditions</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+          </label>
+
+          <button type="submit" class="btn-primary" id="place-order-btn">Place Demo Order</button>
+        </form>
+      </div>
+
+      <aside id="checkout-summary" class="bag-summary-card"></aside>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <div class="toast-container"></div>
+  <script type="module" src="src/pages/checkout.js"></script>
+</body>
+</html>

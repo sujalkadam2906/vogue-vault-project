@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions: VOGUE VAULT</title>
+  <meta name="description" content="Terms and Conditions governing the use of the VOGUE VAULT e-commerce storefront and demo services." />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3B2A20" />
+  <link rel="canonical" href="https://YOURDOMAIN.com/terms.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Terms and Conditions: VOGUE VAULT" />
+  <meta property="og:description" content="Terms and Conditions governing the use of the VOGUE VAULT e-commerce storefront and demo services." />
+  <meta property="og:url" content="https://YOURDOMAIN.com/terms.html" />
+  <meta property="og:site_name" content="VOGUE VAULT" />
+</head>
+<body>
+  <div id="header"></div>
+  <main class="page-container">
+    <div class="legal-container">
+      <header class="legal-header">
+        <h1>Terms and Conditions</h1>
+        <p class="legal-meta">Effective Date: October 2026. Last Updated: October 2026</p>
+      </header>
+
+      <div class="todo-callout" role="note">
+        <h3>Launch Readiness Checklist</h3>
+        <p>Before launching this website commercially, replace all bracketed placeholders with verified legal details and have these terms reviewed by qualified legal counsel:</p>
+        <ul>
+          <li>Replace [BUSINESS LEGAL NAME] with registered corporate name.</li>
+          <li>Replace [CONTACT EMAIL] with legal and customer support email.</li>
+          <li>Replace [REGISTERED ADDRESS] with physical registered office address.</li>
+          <li>Confirm governing state and dispute resolution clauses under Indian law.</li>
+        </ul>
+      </div>
+
+      <article class="legal-section">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using the VOGUE VAULT web application, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, you should discontinue use of the site immediately.</p>
+        <p>This website is presented by [BUSINESS LEGAL NAME] as a curated apparel presentation and interactive shopping interface.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>2. Use of the Site and Demonstration Scope</h2>
+        <p>You agree to use this site strictly for lawful shopping discovery and browsing. The simulated checkout function processes mock orders stored locally within the browser; no actual financial debit or binding commercial contract for sale is concluded through the demo interface unless formal transactional systems are enabled.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>3. Catalogue Accuracy, Orders and Pricing</h2>
+        <p>All prices displayed on the site are stated in Indian Rupees (INR) and are inclusive of applicable goods and services tax (GST) where indicated. While we take every effort to ensure accurate pricing and product descriptions, errors may occasionally arise. We reserve the right to correct typographical inaccuracies or cancel orders affected by manifest pricing errors prior to fulfillment.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>4. Returns and Refunds</h2>
+        <p>Standard orders qualify for a 15-day return window from the date of simulated delivery, provided items remain unworn, unwashed, and retain original brand tags. Full return procedures and exceptions are outlined in our <a href="shipping.html">Shipping and Returns Policy</a>.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>5. Intellectual Property and Copyright</h2>
+        <p>All brand graphics, typography arrangements, user interface designs, and code comprising VOGUE VAULT are the proprietary intellectual property of [BUSINESS LEGAL NAME].</p>
+        <p>Product photography is utilized under respective open commercial licenses (including the Unsplash License and Pexels License) or by explicit permission. Detailed photography attributions and source links are published on our <a href="credits.html">Image Credits page</a>.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>6. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, [BUSINESS LEGAL NAME] and its operators shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the site, unauthorized access to user devices, or interruptions in service.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>7. Governing Law and Jurisdiction</h2>
+        <p>These terms and conditions are governed by and construed in accordance with the laws of the Republic of India. Any disputes arising in connection with these terms shall be subject to the exclusive jurisdiction of the competent courts in India.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>8. Contact Information</h2>
+        <p>For questions or formal inquiries concerning these Terms and Conditions, please contact:</p>
+        <p><strong>Legal Entity:</strong> [BUSINESS LEGAL NAME]</p>
+        <p><strong>Email:</strong> [CONTACT EMAIL]</p>
+        <p><strong>Registered Address:</strong> [REGISTERED ADDRESS]</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>9. Legal Advisory Notice</h2>
+        <p><em>Notice: These terms are templates provided for structure and compliance planning. Prior to engaging in commercial sales, a qualified legal professional must review and adapt these terms to your entity's operational structure.</em></p>
+      </article>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <div class="toast-container"></div>
+  <script type="module">
+    import { renderHeader } from './src/components/header.js';
+    import { renderFooter } from './src/components/footer.js';
+    import { getCartItemCount } from './src/services/cart-service.js';
+    document.getElementById('header').innerHTML = renderHeader(getCartItemCount());
+    document.getElementById('footer').innerHTML = renderFooter();
+  </script>
+</body>
+</html>

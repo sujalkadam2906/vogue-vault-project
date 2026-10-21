@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About: VOGUE VAULT</title>
+  <meta name="description" content="Learn about VOGUE VAULT, our curated collection philosophy, and the principles behind our storefront." />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3B2A20" />
+  <link rel="canonical" href="https://YOURDOMAIN.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About: VOGUE VAULT" />
+  <meta property="og:description" content="Learn about VOGUE VAULT, our curated collection philosophy, and the principles behind our storefront." />
+  <meta property="og:url" content="https://YOURDOMAIN.com/about.html" />
+  <meta property="og:site_name" content="VOGUE VAULT" />
+</head>
+<body>
+  <div id="header"></div>
+  <main class="page-container">
+    <div class="legal-container">
+      <header class="legal-header">
+        <h1>About VOGUE VAULT</h1>
+        <p class="legal-meta">Curated wardrobe essentials and functional design</p>
+      </header>
+
+      <article class="legal-section">
+        <h2>Brand Purpose</h2>
+        <p>VOGUE VAULT is a modern fashion catalogue designed to offer straightforward, durable, and well-tailored garments. We focus on staple pieces across menswear, womenswear, and footwear that outlast seasonal fads.</p>
+        <p>Our assortment emphasizes breathable natural cottons, structured denim, lightweight outerwear, and durable footwear intended for regular wear.</p>
+      </article>
+
+      <article class="legal-section">
+        <h2>Digital Experience</h2>
+        <p>This web application is built with vanilla web technologies, adhering to high standards for performance, accessibility, and visual restraint:</p>
+        <ul>
+          <li>Zero layout shifts with explicit image aspect ratios and dimensions.</li>
+          <li>Full keyboard navigation support with visible focus indicators.</li>
+          <li>Transparent pricing without fabricated urgency or deceptive metrics.</li>
+          <li>Local browser-side persistence for shopping bags and wishlists.</li>
+        </ul>
+      </article>
+
+      <article class="legal-section">
+        <h2>Project Status</h2>
+        <p>This storefront currently operates as an active frontend demonstration. Orders placed on the site simulate the checkout workflow and store order history in your local browser storage. No payment card data is processed.</p>
+      </article>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <div class="toast-container"></div>
+  <script type="module">
+    import { renderHeader } from './src/components/header.js';
+    import { renderFooter } from './src/components/footer.js';
+    import { getCartItemCount } from './src/services/cart-service.js';
+    document.getElementById('header').innerHTML = renderHeader(getCartItemCount());
+    document.getElementById('footer').innerHTML = renderFooter();
+  </script>
+</body>
+</html>
